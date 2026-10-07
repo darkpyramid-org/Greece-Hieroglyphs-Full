@@ -3,6 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
+  "author": {
+    "name": "darkpyramid-org",
+    "email": "darkpyramid.solutions@gmail.com",
+    "url": "https://www.darkpyramid.net"
+  },
   "scripts": {
     "dev": "npm run build && node --env-file=.env --enable-source-maps ./dist/index.mjs",
     "build": "node ./build.mjs",

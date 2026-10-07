@@ -195,55 +195,6 @@ export const swaggerConfig = {
         },
       },
     },
-    "/api/track-order": {
-      get: {
-        summary: "Track order",
-        description: "Get order status by ID and email",
-        tags: ["Orders"],
-        parameters: [
-          {
-            name: "id",
-            in: "query",
-            required: true,
-            schema: { type: "string" },
-            description: "Order ID",
-          },
-          {
-            name: "email",
-            in: "query",
-            required: true,
-            schema: { type: "string", format: "email" },
-            description: "Customer email",
-          },
-        ],
-        responses: {
-          "200": {
-            description: "Order found",
-            content: {
-              "application/json": {
-                schema: {
-                  type: "object",
-                  properties: {
-                    order: {
-                      type: "object",
-                      properties: {
-                        id: { type: "string" },
-                        status: { type: "string" },
-                        total: { type: "number" },
-                        created_at: { type: "string", format: "date-time" },
-                      },
-                    },
-                  },
-                },
-              },
-            },
-          },
-          "404": {
-            description: "Order not found",
-          },
-        },
-      },
-    },
     "/api/products": {
       get: {
         summary: "Get products",

@@ -1,13 +1,18 @@
 {
   "name": "greece-hieroglyphs-full",
   "private": true,
+  "author": {
+    "name": "darkpyramid-org",
+    "email": "darkpyramid.solutions@gmail.com",
+    "url": "https://www.darkpyramid.net"
+  },
   "scripts": {
     "build": "npm run build:api && npm run build:frontend",
     "build:api": "cd api-server && npm run build",
     "build:frontend": "cd greece && npm run build",
     "install:all": "npm ci && cd api-server && npm ci && cd ../greece && npm ci"
   },
-  "description": "Monorepo for Greece Hieroglyphs: Frontend (Vite) deployed on Vercel, Backend (Express) deployed on Netlify/Render. Built with Dark Pyramid.",
+  "description": "Monorepo for Greece Hieroglyphs: Fullstack deployed on Vercel. Built with Dark Pyramid.",
   "dependencies": {}
 }
 

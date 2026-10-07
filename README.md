@@ -55,7 +55,7 @@ Detailed logs, instructions, and schemas are separated into high-fidelity manual
 | [🛠️ Setup & Run](./docs/SETUP.md) | Local development | Backend, Web, and Expo Mobile setups, CLI scripts, ENV tables, codegen, and troubleshooting logs. |
 | [📐 System Architecture](./docs/ARCHITECTURE.md) | Design patterns | Repository mappings, mobile/web layout schemas, data flows, security details, and optimization benchmarks. |
 | [🔌 API Reference](./docs/API.md) | Endpoint schemas | Input validation rules, sample payloads, curl scripts, and Swagger UI coordinates. |
-| [🚀 Operations & Deploy](./docs/DEPLOYMENT.md) | Production infrastructure | Docker configs, PM2 scripts, cloud hosting rules (Vercel/Render/AWS), Expo EAS builds, and backup strategies. |
+| [🚀 Operations & Deploy](./docs/DEPLOYMENT.md) | Production infrastructure | Docker configs, PM2 scripts, cloud hosting rules (Vercel), Expo EAS builds, and backup strategies. |
 
 </div>
 

@@ -4,7 +4,7 @@
 
 If you discover a security vulnerability, please report it privately to the maintainers:
 
-- **Email**: security@greece-hieroglyphs.com
+- **Email**: darkpyramid.solutions@gmail.com
 - **GitHub**: Open a private issue in the repository (if enabled) or contact the repository owners directly.
 
 We will respond promptly, assess the issue, and work with you to resolve it. Please do not disclose the vulnerability publicly until a fix is available.

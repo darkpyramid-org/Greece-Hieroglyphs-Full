@@ -2,6 +2,11 @@
   "name": "@workspace/greece-mobile",
   "version": "0.0.0",
   "private": true,
+  "author": {
+    "name": "darkpyramid-org",
+    "email": "darkpyramid.solutions@gmail.com",
+    "url": "https://www.darkpyramid.net"
+  },
   "main": "expo-router/entry",
   "scripts": {
     "dev": "npx expo start --localhost --port 8081",

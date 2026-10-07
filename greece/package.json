@@ -3,6 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
+  "author": {
+    "name": "darkpyramid-org",
+    "email": "darkpyramid.solutions@gmail.com",
+    "url": "https://www.darkpyramid.net"
+  },
   "scripts": {
     "dev": "vite --config vite.config.ts --host 0.0.0.0",
     "build": "vite build --config vite.config.ts",
