@@ -1,8 +1,0 @@
-User-agent: *
-Allow: /
-
-Disallow: /cart
-Disallow: /checkout/
-Disallow: /api/
-
-Sitemap: https://ohanna.store/sitemap.xml

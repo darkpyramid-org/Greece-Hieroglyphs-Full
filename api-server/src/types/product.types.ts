@@ -5,25 +5,33 @@
 import type { BaseEntity } from './shared.types';
 
 /**
- * Product category enum
+ * Product categories.
+ * These MUST stay in sync with the `categories` navigation in the web storefront
+ * and with the values seeded into `products.category`.
  */
-export type ProductCategory = 
-  | 'dresses' 
-  | 'tops' 
-  | 'bottoms' 
-  | 'accessories' 
-  | 'shoes' 
-  | 'bags';
+export const PRODUCT_CATEGORIES = [
+  'Hoodies',
+  'T-Shirts',
+  'Jackets',
+  'Bottoms',
+  'Accessories',
+] as const;
+
+export type ProductCategory = (typeof PRODUCT_CATEGORIES)[number];
 
 /**
- * Product badge types
+ * Product badge types. Must stay in sync with `products.badge` seed values.
  */
-export type ProductBadge = 
-  | 'new' 
-  | 'sale' 
-  | 'bestseller' 
-  | 'limited' 
-  | 'exclusive';
+export const PRODUCT_BADGES = [
+  'NEW',
+  'BESTSELLER',
+  'LIMITED',
+  'TRENDING',
+  'EXCLUSIVE',
+  'UTILITY',
+] as const;
+
+export type ProductBadge = (typeof PRODUCT_BADGES)[number];
 
 /**
  * Product size options
@@ -63,7 +71,6 @@ export interface ProductResponse extends BaseEntity {
   sizes?: ProductSize[];
   colors?: ProductColor[];
   tags?: string[];
-  isActive: boolean;
 }
 
 /**
@@ -119,6 +126,4 @@ export interface CreateProductRequest {
 /**
  * Product update request
  */
-export interface UpdateProductRequest extends Partial<CreateProductRequest> {
-  isActive?: boolean;
-}
+export type UpdateProductRequest = Partial<CreateProductRequest>;

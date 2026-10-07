@@ -51,7 +51,13 @@ export const orderQueries = {
    */
   async create(data: InsertOrder): Promise<Order> {
     const result = await db.insert(ordersTable).values({
-      id: generateId(),
+      /**
+       * Honour a caller-supplied id (e.g. the human-readable `OHN-…` id that
+       * the customer is shown). Previously every row got a random UUID, so the
+       * order id handed back by the checkout endpoint could never be used to
+       * track the order it referred to.
+       */
+      id: data.id || generateId(),
       shippingAddress: data.shippingAddress,
       items: data.items,
       customerEmail: data.customerEmail,

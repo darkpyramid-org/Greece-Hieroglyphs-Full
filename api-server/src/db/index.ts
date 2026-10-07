@@ -14,7 +14,7 @@ if (!databaseUrl) {
 }
 
 export const pool = new Pool({
-  connectionString: databaseUrl || "postgresql://localhost:5432/ohanna",
+  connectionString: databaseUrl || "postgresql://localhost:5432/greece_db",
   // Don't fail on connection error during initialization
   max: 10,
   idleTimeoutMillis: 30000,

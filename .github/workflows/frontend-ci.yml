@@ -4,12 +4,12 @@ on:
   push:
     branches: [main, develop]
     paths:
-      - 'ohanna/**'
+      - 'greece/**'
       - '.github/workflows/frontend-ci.yml'
   pull_request:
     branches: [main, develop]
     paths:
-      - 'ohanna/**'
+      - 'greece/**'
 
 jobs:
   test:
@@ -27,20 +27,20 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
-          cache-dependency-path: 'ohanna/package-lock.json'
+          cache-dependency-path: 'greece/package-lock.json'
       
       - name: Install dependencies
         run: npm ci
-        working-directory: ohanna
+        working-directory: greece
       
       - name: Type checking
         run: npm run typecheck
-        working-directory: ohanna
+        working-directory: greece
       
       - name: Build
         run: npm run build
-        working-directory: ohanna
+        working-directory: greece
       
       - name: Verify build output
         run: test -d dist
-        working-directory: ohanna
+        working-directory: greece

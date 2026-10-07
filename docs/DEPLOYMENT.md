@@ -1,6 +1,6 @@
 # 🚀 Production Deployment & Operations Guide
 
-This guide is the single source of truth for preparing, deploying, and managing the **OHANNA** application in production environments. It covers containerization, hosting platforms, database administration, backups, and disaster recovery.
+This guide is the single source of truth for preparing, deploying, and managing the **GREECE** application in production environments. It covers containerization, hosting platforms, database administration, backups, and disaster recovery.
 
 ---
 
@@ -27,29 +27,29 @@ PORT=3001
 NODE_ENV=production
 
 # Security & Origin Control
-CORS_ORIGINS=https://ohanna.com,https://www.ohanna.com
+CORS_ORIGINS=https://greece-hieroglyphs.com,https://www.greece-hieroglyphs.com
 
 # Stripe Integration (Required for live transactions)
 STRIPE_SECRET_KEY=sk_live_your_actual_production_key
 
 # PostgreSQL Connection String
-DATABASE_URL=postgresql://db_user:db_secure_password@prod-db-host:5432/ohanna?sslmode=require
+DATABASE_URL=postgresql://db_user:db_secure_password@prod-db-host:5432/greece?sslmode=require
 ```
 
 ### Frontend Storefront (`.env`)
 
 ```ini
 # Production API endpoint targeting the backend gateway
-VITE_API_URL=https://api.ohanna.com
+VITE_API_URL=https://api.greece-hieroglyphs.com
 ```
 
-### Mobile Client (`ohanna-mobile/`)
+### Mobile Client (`greece-mobile/`)
 
 Environment variables in Expo must be prefixed with `EXPO_PUBLIC_` to be compiled into the native application bundle:
 
 ```ini
 # Production API endpoint targeting the backend gateway
-EXPO_PUBLIC_API_URL=https://api.ohanna.com
+EXPO_PUBLIC_API_URL=https://api.greece-hieroglyphs.com
 ```
 
 ---
@@ -78,7 +78,7 @@ ENV NODE_ENV=production
 CMD ["node", "dist/index.mjs"]
 ```
 
-### 2. Frontend Dockerfile (`ohanna/Dockerfile`)
+### 2. Frontend Dockerfile (`greece/Dockerfile`)
 
 ```dockerfile
 FROM node:20-alpine AS builder
@@ -112,12 +112,12 @@ services:
       NODE_ENV: production
       DATABASE_URL: ${DATABASE_URL}
       STRIPE_SECRET_KEY: ${STRIPE_SECRET_KEY}
-      CORS_ORIGINS: https://ohanna.com
+      CORS_ORIGINS: https://greece-hieroglyphs.com
     restart: always
 
   frontend:
     build:
-      context: ./ohanna
+      context: ./greece
       dockerfile: Dockerfile
     ports:
       - "80:80"
@@ -136,9 +136,9 @@ docker-compose up -d --build
 ## 🌐 Hosting & Cloud Infrastructure
 
 ### Vercel (Recommended for Frontend Storefront)
-Deploy the frontend `ohanna/` client via Vercel for global edge CDN distribution:
+Deploy the frontend `greece/` client via Vercel for global edge CDN distribution:
 ```bash
-cd ohanna
+cd greece
 npm install -g vercel
 vercel --prod
 ```
@@ -149,7 +149,7 @@ vercel --prod
 Deploy the Express server package:
 ```bash
 # Create and configure Heroku app
-heroku create ohanna-api
+heroku create greece-api
 heroku config:set NODE_ENV=production
 heroku config:set DATABASE_URL=postgresql://...
 
@@ -168,11 +168,11 @@ For manual infrastructure management on AWS:
    ```
 2. **Setup API Server & PM2 Process Manager**:
    ```bash
-   cd /var/www/ohanna-landing-page/api-server
+   cd /var/www/greece-hieroglyphs-full/api-server
    npm install --legacy-peer-deps
    npm run build
    npm install -g pm2
-   pm2 start dist/index.mjs --name "ohanna-api"
+   pm2 start dist/index.mjs --name "greece-api"
    pm2 save
    pm2 startup
    ```
@@ -180,7 +180,7 @@ For manual infrastructure management on AWS:
    ```nginx
    server {
        listen 80;
-       server_name api.ohanna.com;
+       server_name api.greece-hieroglyphs.com;
        location / {
            proxy_pass http://localhost:3001;
            proxy_http_version 1.1;
@@ -193,7 +193,7 @@ For manual infrastructure management on AWS:
    ```
 
 ### DigitalOcean App Platform & Droplets
-DigitalOcean's **App Platform** allows direct deployment by connecting your GitHub repo, defining the build output directory for each service component (`ohanna/dist` for frontend), and exposing target ports (`3001` for backend).
+DigitalOcean's **App Platform** allows direct deployment by connecting your GitHub repo, defining the build output directory for each service component (`greece/dist` for frontend), and exposing target ports (`3001` for backend).
 
 ### Expo Application Services (EAS) (Mobile Storefront App)
 To compile and submit the mobile application to the Apple App Store and Google Play Store:
@@ -205,7 +205,7 @@ To compile and submit the mobile application to the Apple App Store and Google P
    ```
 2. **Project Initialization**: Initialize EAS build settings in the mobile workspace:
    ```bash
-   cd ohanna-mobile
+   cd greece-mobile
    eas build:configure
    ```
    This generates an `eas.json` configuration detailing production and development build profiles.
@@ -242,7 +242,7 @@ To secure AWS EC2 or DigitalOcean Droplets with free SSL certificates:
 ```bash
 sudo apt-get update
 sudo apt-get install certbot python3-certbot-nginx
-sudo certbot --nginx -d ohanna.com -d www.ohanna.com
+sudo certbot --nginx -d greece-hieroglyphs.com -d www.greece-hieroglyphs.com
 ```
 
 ### AWS Certificate Manager (ACM)
@@ -276,10 +276,10 @@ npm run db:rollback
 In production, backend logs are output to stdout as structured JSON:
 ```bash
 # View and format PM2 logs
-pm2 logs ohanna-api --json
+pm2 logs greece-api --json
 
 # Read structured Docker containers logs
-docker logs -f ohanna-backend-1
+docker logs -f greece-backend-1
 ```
 
 ### Compression & Security Headers
@@ -314,7 +314,7 @@ In the event of a deployment failure or data corruption:
   ```bash
   git revert HEAD
   npm run build
-  pm2 restart ohanna-api
+  pm2 restart greece-api
   ```
 * **Database Restoration**: Import the latest daily database snapshot:
   ```bash

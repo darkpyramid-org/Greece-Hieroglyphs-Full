@@ -1,13 +1,13 @@
-# Contributing to Ohanna
+# Contributing to Greece
 
-Thank you for considering contributing to **Ohanna**! We welcome contributions of any kind—bug reports, feature requests, documentation improvements, or code contributions.
+Thank you for considering contributing to **Greece**! We welcome contributions of any kind—bug reports, feature requests, documentation improvements, or code contributions.
 
 ## Getting Started
 
 1. **Fork the repository** and clone your fork:
    ```bash
-   git clone https://github.com/your-username/ohanna-landing-page.git
-   cd ohanna-landing-page
+   git clone https://github.com/your-username/greece-hieroglyphs-full.git
+   cd greece-hieroglyphs-full
    ```
 2. **Install dependencies**:
    ```bash
@@ -44,4 +44,4 @@ Thank you for considering contributing to **Ohanna**! We welcome contributions o
 
 ## Thanks!
 
-Your contributions help make Ohanna better for everyone. 🎉
+Your contributions help make Greece better for everyone. 🎉

@@ -27,6 +27,7 @@ export const ordersTable = pgTable("orders", {
 
 // Create insert schema and omit auto-generated fields
 export const insertOrderSchema = z.object({
+  id: z.string().min(1).max(64).optional(),
   customerEmail: z.string().email("Invalid email"),
   customerName: z.string().min(1, "Customer name is required"),
   shippingAddress: z.unknown(), // Required

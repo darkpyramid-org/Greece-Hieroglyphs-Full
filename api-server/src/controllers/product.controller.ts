@@ -19,7 +19,13 @@ export const productController = {
       res.status(404).json({ error: "Product not found" });
       return;
     }
-    res.json(product);
+    /**
+     * Wrapped in `{ product }` for consistency with every other endpoint
+     * (`{ products: [...] }`, `{ order }`). This used to return the bare
+     * product, which contradicted both the shared `ProductResponse` type and
+     * the storefront's `apiClient.products.getById`.
+     */
+    res.json({ product });
   },
 
   async getByCategory(req: Request, res: Response): Promise<void> {

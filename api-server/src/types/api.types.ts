@@ -7,33 +7,41 @@ import type { Request, Response } from 'express';
 
 /**
  * Extended Express Request with typed body
+ *
+ * `body`, `query` and `params` are narrowed via `Omit` because Express pins them
+ * to `any`/`ParamsDictionary`/`ParsedQs`. Extending `Request` directly makes the
+ * redeclared members incompatible (TS2430).
  */
-export interface TypedRequest<T = any> extends Request {
-  body: T;
-}
+export type TypedRequest<TBody = unknown> = Omit<Request, "body"> & {
+  body: TBody;
+};
 
 /**
  * Extended Express Request with typed query
  */
-export interface TypedRequestQuery<T = any> extends Request {
-  query: T;
-}
+export type TypedRequestQuery<TQuery = unknown> = Omit<Request, "query"> & {
+  query: TQuery;
+};
 
 /**
  * Extended Express Request with typed params
  */
-export interface TypedRequestParams<T = any> extends Request {
-  params: T;
-}
+export type TypedRequestParams<TParams = unknown> = Omit<Request, "params"> & {
+  params: TParams;
+};
 
 /**
  * Full typed request
  */
-export interface TypedRequestFull<TBody = any, TQuery = any, TParams = any> extends Request {
+export type TypedRequestFull<
+  TBody = unknown,
+  TQuery = unknown,
+  TParams = unknown,
+> = Omit<Request, "body" | "query" | "params"> & {
   body: TBody;
   query: TQuery;
   params: TParams;
-}
+};
 
 /**
  * API Error structure

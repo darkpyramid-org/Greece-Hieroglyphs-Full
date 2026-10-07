@@ -37,7 +37,9 @@ export interface ShippingAddress {
 }
 
 /**
- * Cart item structure
+ * Cart item structure as stored and returned by the API.
+ *
+ * `unitPrice` / `totalPrice` are always derived from the catalog by the server.
  */
 export interface CartItem {
   product: {
@@ -52,6 +54,26 @@ export interface CartItem {
   color?: string;
   unitPrice: number; // in cents
   totalPrice: number; // in cents
+}
+
+/**
+ * Cart item as submitted by a client.
+ *
+ * Only the product reference and the quantity are honoured. Price fields sent
+ * by the client are ignored: `order.service` re-resolves every line against the
+ * database, so a tampered `price` cannot change what the customer is charged.
+ */
+export interface CartItemInput {
+  product: {
+    id: string;
+    price?: number; // in cents — ignored, used only in demo mode
+    name?: string; // ignored, used only in demo mode
+    description?: string;
+    imageUrl?: string;
+  };
+  quantity: number;
+  size?: string;
+  color?: string;
 }
 
 /**
@@ -79,12 +101,12 @@ export interface OrderDetails extends BaseEntity {
  * Checkout request
  */
 export interface CheckoutRequest {
-  items: CartItem[];
+  items: CartItemInput[];
   successUrl: string;
   cancelUrl: string;
   customerEmail: string;
   customerName: string;
-  shippingAddress: ShippingAddress;
+  shippingAddress?: ShippingAddress;
   paymentMethod?: PaymentMethod;
   notes?: string;
 }

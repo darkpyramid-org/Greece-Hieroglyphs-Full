@@ -1,13 +1,14 @@
 {
-  "name": "ohanna-landing-page",
+  "name": "greece-hieroglyphs-full",
   "private": true,
   "scripts": {
     "build": "npm run build:api && npm run build:frontend",
     "build:api": "cd api-server && npm run build",
-    "build:frontend": "cd ohanna && npm run build",
-    "install:all": "npm ci && cd api-server && npm ci && cd ../ohanna && npm ci"
+    "build:frontend": "cd greece && npm run build",
+    "install:all": "npm ci && cd api-server && npm ci && cd ../greece && npm ci"
   },
-  "description": "Monorepo: Frontend (Vite) deployed on Vercel, Backend (Express) deployed on Netlify",
+  "description": "Monorepo for Greece Hieroglyphs: Frontend (Vite) deployed on Vercel, Backend (Express) deployed on Netlify/Render. Built with Dark Pyramid.",
   "dependencies": {}
 }
+
 

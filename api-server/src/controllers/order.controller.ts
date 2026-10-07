@@ -1,45 +1,24 @@
 import type { Request, Response } from "express";
 import { orderService } from "../services";
-import { ensureString } from "../lib/query-helpers";
+import type { TrackOrderQuery } from "../schemas";
 
 export const orderController = {
+  /**
+   * `req.body` has already been parsed and validated by `validateRequest`
+   * (`checkoutBodySchema`), so the validated payload can be forwarded as-is.
+   */
   async checkout(req: Request, res: Response): Promise<void> {
-    const {
-      items,
-      successUrl,
-      cancelUrl,
-      customerEmail,
-      customerName,
-      shippingAddress,
-    } = req.body;
-
-    if (!items?.length) {
-      res.status(400).json({ error: "Cart is empty" });
-      return;
-    }
-
-    const result = await orderService.createCheckout({
-      items,
-      successUrl,
-      cancelUrl,
-      customerEmail: customerEmail?.trim() || "guest@ohanna.store",
-      customerName: customerName?.trim() || "Guest",
-      shippingAddress,
-    });
-
+    const result = await orderService.createCheckout(req.body);
     res.json(result);
   },
 
   async trackOrder(req: Request, res: Response): Promise<void> {
-    const orderId = ensureString(req.query.id as string | string[] | undefined);
-    const email = ensureString(req.query.email as string | string[] | undefined);
+    // Populated by `validateQuery(trackOrderQuerySchema)`; `req.query` itself is
+    // read-only in Express 5.
+    const { id, email } = (req as Request & { validatedQuery: TrackOrderQuery })
+      .validatedQuery;
 
-    if (!orderId || !email) {
-      res.status(400).json({ error: "Order ID and email are required" });
-      return;
-    }
-
-    const order = await orderService.trackOrder(orderId, email);
+    const order = await orderService.trackOrder(id, email);
     if (!order) {
       res.status(404).json({ error: "Order not found" });
       return;

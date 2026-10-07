@@ -141,7 +141,11 @@ export const CacheTTL = {
   search: 5 * 60 * 1000, // 5 minutes - search results
 } as const;
 
-// Auto-cleanup expired entries every 5 minutes
-setInterval(() => {
+// Auto-cleanup expired entries every 5 minutes.
+// `unref()` so the timer never keeps the Node process (or a script that imports
+// this module) alive on its own.
+const cleanupTimer = setInterval(() => {
   cache.clearExpired();
 }, 5 * 60 * 1000);
+
+if (typeof cleanupTimer.unref === "function") cleanupTimer.unref();

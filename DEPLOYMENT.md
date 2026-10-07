@@ -4,13 +4,13 @@ This project is a monorepo with separate frontend and backend deployments.
 
 ## Frontend (Vite + React)
 - **Platform**: Vercel
-- **Directory**: `/ohanna`
-- **Config**: `ohanna/vercel.json`
-- **URL**: https://ohanna.vercel.app
+- **Directory**: `/greece`
+- **Config**: `greece/vercel.json`
+- **URL**: https://greece.vercel.app
 
 ### Deploy to Vercel
 1. Connect your GitHub repo to Vercel
-2. Set root directory to `ohanna`
+2. Set root directory to `greece`
 3. Build command: `npm run build`
 4. Output directory: `dist`
 
@@ -31,7 +31,7 @@ Your Express backend requires a platform with full Node.js runtime support.
 1. Create account at https://render.com
 2. Connect your GitHub repo
 3. Create new Web Service
-4. Set name: `ohanna-api`
+4. Set name: `greece-api`
 5. Set runtime: `Node`
 6. Set build command: `npm ci && npm run build`
 7. Set start command: `npm run start`

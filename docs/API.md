@@ -1,6 +1,6 @@
 # 🔌 API Specification & Usage Reference
 
-This guide serves as the definitive reference manual for the **OHANNA** REST API. It outlines the base configurations, authentication models, response envelopes, error schemas, and endpoint request/response payloads.
+This guide serves as the definitive reference manual for the **GREECE** REST API. It outlines the base configurations, authentication models, response envelopes, error schemas, and endpoint request/response payloads.
 
 ---
 
@@ -255,8 +255,8 @@ const response = await createCheckout({
       quantity: 1
     }
   ],
-  successUrl: 'https://ohanna.com/success',
-  cancelUrl: 'https://ohanna.com/cart'
+  successUrl: 'https://greece-hieroglyphs.com/success',
+  cancelUrl: 'https://greece-hieroglyphs.com/cart'
 });
 
 // Route user to target host

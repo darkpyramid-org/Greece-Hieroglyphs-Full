@@ -1,6 +1,6 @@
 # 🛠️ Development Setup Guide
 
-Welcome to the **OHANNA** developer guide! This document is the single source of truth for configuring your local workspace, running the development environment, managing environment variables, writing code, and submitting contributions.
+Welcome to the **GREECE** developer guide! This document is the single source of truth for configuring your local workspace, running the development environment, managing environment variables, writing code, and submitting contributions.
 
 ---
 
@@ -10,7 +10,7 @@ Before setting up the repository, ensure your local machine satisfies these requ
 
 * **Node.js**: `18.x` or `20.x` (LTS versions recommended)
 * **npm**: `9.x` or higher
-* **pnpm**: `9.x` or higher (required for `ohanna-mobile` workspace dependencies)
+* **pnpm**: `9.x` or higher (required for `greece-mobile` workspace dependencies)
 * **Git**: `2.x` or higher
 * **Expo Go**: Installed on a physical mobile device, or a set-up Android Emulator / iOS Simulator.
 
@@ -23,13 +23,13 @@ Before setting up the repository, ensure your local machine satisfies these requ
 Clone the project to your local workspace and navigate to the root directory:
 
 ```bash
-git clone https://github.com/Mostafa-SAID7/ohanna-landing-page.git
-cd ohanna-landing-page
+git clone https://github.com/Mostafa-SAID7/greece-hieroglyphs-full.git
+cd greece-hieroglyphs-full
 ```
 
 ### 2. Workspace Installation
 
-The repository contains three primary directories: `api-server` (backend API), `ohanna` (web storefront), and `ohanna-mobile` (Expo mobile client). You must install dependencies in all folders.
+The repository contains three primary directories: `api-server` (backend API), `greece` (web storefront), and `greece-mobile` (Expo mobile client). You must install dependencies in all folders.
 
 > [!NOTE]
 > * For the backend dependencies, the `--legacy-peer-deps` flag is required to handle legacy peer dependency trees.
@@ -41,11 +41,11 @@ cd api-server
 npm install --legacy-peer-deps
 
 # Install frontend web dependencies
-cd ../ohanna
+cd ../greece
 npm install
 
 # Install mobile client dependencies
-cd ../ohanna-mobile
+cd ../greece-mobile
 pnpm install
 ```
 
@@ -89,7 +89,7 @@ npm run dev
 ### Terminal 2: Frontend Web Storefront
 
 ```bash
-cd ohanna
+cd greece
 npm run dev
 ```
 * **Endpoint**: `http://localhost:5173`
@@ -97,7 +97,7 @@ npm run dev
 ### Terminal 3: Mobile Storefront (Metro Bundler)
 
 ```bash
-cd ohanna-mobile
+cd greece-mobile
 pnpm dev
 ```
 * **Metro URL**: `http://localhost:8081`
@@ -118,14 +118,14 @@ Here is a quick reference for the scripts defined in each component package:
 * `npm start`: Runs the built production server using `node`.
 * `npm run typecheck`: Runs the TypeScript compiler (`tsc`) in dry-run mode to validate types.
 
-### Frontend Storefront (`ohanna/`)
+### Frontend Storefront (`greece/`)
 
 * `npm run dev`: Starts the Vite development server with hot-module replacement (HMR).
 * `npm run build`: Bundles assets for production into the `dist/` directory.
 * `npm run preview`: Statically serves the production build locally for verification.
 * `npm run typecheck`: Performs full type checks using the TypeScript compiler.
 
-### Mobile Client (`ohanna-mobile/`)
+### Mobile Client (`greece-mobile/`)
 
 * `pnpm dev`: Starts the Metro development bundler via Expo CLI.
 * `pnpm start`: Alias for starting the Metro bundler.
@@ -148,7 +148,7 @@ If you make modifications to the API endpoints or spec schemas:
    npm run codegen
    ```
 3. This will rebuild:
-   * **Frontend API Client**: `ohanna/src/api/generated/`
+   * **Frontend API Client**: `greece/src/api/generated/`
    * **Backend Shared Types**: `api-server/src/api/generated/`
 
 ---
@@ -239,12 +239,12 @@ rm -rf node_modules dist
 npm install --legacy-peer-deps
 
 # Clean frontend web
-cd ../ohanna
+cd ../greece
 rm -rf node_modules dist
 npm install
 
 # Clean mobile client
-cd ../ohanna-mobile
+cd ../greece-mobile
 rm -rf node_modules
 pnpm install
 ```

@@ -1,1 +1,68 @@
-node_modules
+# ── Dependencies ──────────────────────────────────────────────
+node_modules/
+.pnp
+.pnp.js
+
+# ── Environment & secrets ─────────────────────────────────────
+# Real .env files must never be committed. Only templates are.
+.env
+.env.local
+.env.*.local
+.env.production
+!.env.example
+!.env*.example
+
+# ── Build outputs ─────────────────────────────────────────────
+dist/
+build/
+*.tsbuildinfo
+
+# Vite
+.vite/
+
+# Expo / React Native
+.expo/
+.expo-shared/
+ohana-mobile/static-build/
+ohana-mobile/dist/
+*.hprof
+
+# ── Logs ──────────────────────────────────────────────────────
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ── Test / coverage ───────────────────────────────────────────
+coverage/
+.nyc_output/
+
+# ── Caches ────────────────────────────────────────────────────
+.cache/
+.parcel-cache/
+.turbo/
+
+# ── Editor / OS ───────────────────────────────────────────────
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Vercel / Netlify / Render ─────────────────────────────────
+.vercel/
+.netlify/
+
+# ── Local runtime files ───────────────────────────────────────
+*.pid
+*.seed
+*.pid.lock

@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Disallow: /cart
+Disallow: /checkout/
+Disallow: /api/
+
+Sitemap: https://greece-hieroglyphs.com/sitemap.xml

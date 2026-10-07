@@ -11,8 +11,8 @@ const allowedOrigins = [
   "http://localhost:3000",
   "http://127.0.0.1:5173",
   "http://127.0.0.1:3000",
-  "https://ohanna-landing-page.vercel.app",
-  "https://ohanna-api.vercel.app",
+  "https://greece-hieroglyphs.vercel.app",
+  "https://greece-api.vercel.app",
   env.corsOrigin,
 ].filter(Boolean); // Remove any undefined values
 

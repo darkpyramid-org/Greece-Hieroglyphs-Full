@@ -1,6 +1,6 @@
-# 🔌 OHANNA API Server
+# 🔌 GREECE HIEROGLYPHS API Server
 
-This directory houses the backend Express.js API server for the **OHANNA** Egyptian Streetwear e-commerce platform.
+This directory houses the backend Express.js API server for the **GREECE HIEROGLYPHS** Egyptian & Hellenic Streetwear e-commerce platform. Built with Dark Pyramid.
 
 ---
 

@@ -44,11 +44,11 @@ jobs:
         with:
           node-version: '20.x'
           cache: 'npm'
-          cache-dependency-path: 'ohanna/package-lock.json'
+          cache-dependency-path: 'greece/package-lock.json'
       
       - name: Frontend Type Check
         run: |
-          cd ohanna
+          cd greece
           npm ci
           npm run typecheck
         continue-on-error: true

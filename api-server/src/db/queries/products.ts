@@ -4,9 +4,19 @@
  */
 
 import { db, productsTable } from "../index";
-import { eq, like, desc } from "drizzle-orm";
+import { eq, like, desc, lte } from "drizzle-orm";
 import type { InsertProduct, Product } from "../schema";
 import { generateId } from "../../lib/id-generator";
+
+/**
+ * Escape `%`, `_` and `\` so a user-supplied search term is matched literally.
+ *
+ * Without this, `GET /api/products/search/%` returns the entire catalog and
+ * `%25`/`_` can be used to probe the table.
+ */
+function escapeLikePattern(value: string): string {
+  return value.replace(/[\\%_]/g, (char) => `\\${char}`);
+}
 
 export const productQueries = {
   /**
@@ -50,7 +60,7 @@ export const productQueries = {
     return db
       .select()
       .from(productsTable)
-      .where(like(productsTable.name, `%${query}%`))
+      .where(like(productsTable.name, `%${escapeLikePattern(query)}%`))
       .orderBy(desc(productsTable.createdAt));
   },
 
@@ -97,13 +107,13 @@ export const productQueries = {
   },
 
   /**
-   * Get low stock products
+   * Get low stock products (stock at or below the threshold)
    */
   async getLowStock(threshold: number = 10): Promise<Product[]> {
     return db
       .select()
       .from(productsTable)
-      .where(eq(productsTable.stock, threshold))
+      .where(lte(productsTable.stock, threshold))
       .orderBy(desc(productsTable.createdAt));
   },
 };
