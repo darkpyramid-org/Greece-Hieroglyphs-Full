@@ -1,4 +1,4 @@
-api-server
+# Exclude documentation and repo metadata - not needed for deployment
 docs
 .github
 DEPLOYMENT.md
@@ -9,3 +9,10 @@ SECURITY.md
 CODE_OF_CONDUCT.md
 CONTRIBUTING.md
 turbo.json
+
+# Exclude mobile app - not deployed to Vercel
+greece-mobile
+
+# Exclude local env files
+api-server/.env
+greece/.env
