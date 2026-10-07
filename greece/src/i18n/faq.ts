@@ -7,7 +7,7 @@ export const faq = {
         category: "ORDERS & PAYMENTS",
         items: [
           { q: "What payment methods do you accept?", a: "We accept all major credit/debit cards (Visa, Mastercard), PayPal, Fawry, and cash on delivery within Egypt." },
-          { q: "Can I change or cancel my order?", a: "Orders can be modified or cancelled within 2 hours of placement. Contact us immediately at support@verywill.com." },
+          { q: "Can I change or cancel my order?", a: "Orders can be modified or cancelled within 2 hours of placement. Contact us immediately at support@greece.com." },
           { q: "Is my payment information secure?", a: "All payments are processed by Stripe. We never store your card details." },
         ],
       },
@@ -37,7 +37,7 @@ export const faq = {
         category: "الطلبات والدفع",
         items: [
           { q: "ما طرق الدفع المتاحة؟", a: "نقبل جميع بطاقات الائتمان/الخصم الرئيسية (فيزا، ماستركارد)، PayPal، فوري، والدفع عند الاستلام داخل مصر." },
-          { q: "هل يمكنني تغيير أو إلغاء طلبي؟", a: "يمكن تعديل أو إلغاء الطلبات خلال ساعتين من تقديمها. تواصل معنا فوراً على support@verywill.com" },
+          { q: "هل يمكنني تغيير أو إلغاء طلبي؟", a: "يمكن تعديل أو إلغاء الطلبات خلال ساعتين من تقديمها. تواصل معنا فوراً على support@greece.com" },
           { q: "هل معلومات الدفع الخاصة بي آمنة؟", a: "جميع المدفوعات تعالج عبر Stripe. لا نحتفظ ببيانات بطاقتك أبداً." },
         ],
       },
@@ -53,7 +53,7 @@ export const faq = {
         category: "الإرجاع والاستبدال",
         items: [
           { q: "ما سياسة الإرجاع لديكم؟", a: "نقبل الإرجاع خلال 14 يوماً من التسليم للمنتجات غير المستخدمة مع الملصقات الأصلية." },
-          { q: "كيف أبدأ عملية الإرجاع؟", a: "راسلنا على returns@verywill.com برقم طلبك وسبب الإرجاع وسنرشدك خلال العملية." },
+          { q: "كيف أبدأ عملية الإرجاع؟", a: "راسلنا على returns@greece.com برقم طلبك وسبب الإرجاع وسنرشدك خلال العملية." },
           { q: "هل تقدمون استبدالاً؟", a: "نعم! نستبدل بمقاسات أو ألوان مختلفة خلال 14 يوماً حسب المخزون المتاح." },
         ],
       },

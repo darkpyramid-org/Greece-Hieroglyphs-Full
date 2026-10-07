@@ -1,4 +1,4 @@
-const SITE_URL = "https://verywill.store";
+const SITE_URL = "https://greece.store";
 
 export interface PageSEO {
   title: string;
@@ -23,8 +23,8 @@ const organizationSchema = {
     addressCountry: "EG",
   },
   sameAs: [
-    "https://instagram.com/verywill_store",
-    "https://tiktok.com/@verywill_store",
+    "https://instagram.com/greece_store",
+    "https://tiktok.com/@greece_store",
   ],
 };
 

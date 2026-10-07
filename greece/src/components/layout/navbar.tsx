@@ -381,7 +381,7 @@ const { title: notifTitle, markAll: notifMarkAll, items: notifItems } =
                                 <label htmlFor="login-email" className="block text-[10px] font-black hieroglyph-font text-[#1B1B1B]/50 dark:text-[#FDF8EF]/50 tracking-wider mb-1.5">
                                   {t("auth.email")}
                                 </label>
-                                <input id="login-email" name="email" type="email" className="verywill-input" placeholder="your@email.com" autoComplete="email" required />
+                                <input id="login-email" name="email" type="email" className="greece-input" placeholder="your@email.com" autoComplete="email" required />
                               </div>
                               <div>
                                 <div className="flex items-center justify-between mb-1.5">
@@ -392,7 +392,7 @@ const { title: notifTitle, markAll: notifMarkAll, items: notifItems } =
                                     {t("auth.forgotPassword")}
                                   </button>
                                 </div>
-                                <input id="login-password" name="password" type="password" className="verywill-input" placeholder="••••••••" autoComplete="current-password" required />
+                                <input id="login-password" name="password" type="password" className="greece-input" placeholder="••••••••" autoComplete="current-password" required />
                               </div>
                               <button
                                 type="submit"
@@ -422,13 +422,13 @@ const { title: notifTitle, markAll: notifMarkAll, items: notifItems } =
                                   <label htmlFor="register-name" className="block text-[10px] font-black hieroglyph-font text-[#1B1B1B]/50 dark:text-[#FDF8EF]/50 tracking-wider mb-1.5">
                                     {t("auth.fullName")}
                                   </label>
-                                  <input id="register-name" name="name" type="text" className="verywill-input" placeholder="Ahmed Mohamed" autoComplete="name" required />
+                                  <input id="register-name" name="name" type="text" className="greece-input" placeholder="Ahmed Mohamed" autoComplete="name" required />
                                 </div>
                                 <div className="col-span-2">
                                   <label htmlFor="register-email" className="block text-[10px] font-black hieroglyph-font text-[#1B1B1B]/50 dark:text-[#FDF8EF]/50 tracking-wider mb-1.5">
                                     {t("auth.email")}
                                   </label>
-                                  <input id="register-email" name="email" type="email" className="verywill-input" placeholder="your@email.com" autoComplete="email" required />
+                                  <input id="register-email" name="email" type="email" className="greece-input" placeholder="your@email.com" autoComplete="email" required />
                                 </div>
                                 <div className="col-span-2">
                                   <label htmlFor="register-password" className="block text-[10px] font-black hieroglyph-font text-[#1B1B1B]/50 dark:text-[#FDF8EF]/50 tracking-wider mb-1.5">

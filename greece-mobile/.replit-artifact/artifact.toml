@@ -1,8 +1,8 @@
 kind = "mobile"
-previewPath = "/ohanna-mobile/"
+previewPath = "/greece-mobile/"
 title = "OHANNA Mobile"
 version = "1.0.0"
-id = "artifacts/ohanna-mobile"
+id = "artifacts/greece-mobile"
 router = "expo-domain"
 
 [[integratedSkills]]
@@ -12,7 +12,7 @@ version = "1.0.0"
 [[services]]
 ensurePreviewReachable = "/status"
 name = "expo"
-paths = [ "/ohanna-mobile/" ]
+paths = [ "/greece-mobile/" ]
 localPort = 20706
 
 [services.development]
@@ -24,4 +24,4 @@ run = [ "npm", "run", "serve" ]
 
 [services.env]
 PORT = "20706"
-BASE_PATH = "/ohanna-mobile/"
+BASE_PATH = "/greece-mobile/"

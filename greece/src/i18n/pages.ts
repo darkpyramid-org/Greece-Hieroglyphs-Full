@@ -65,7 +65,7 @@ export const pages = {
       openTitle: "OPEN POSITIONS",
       applyBtn: "Apply Now",
       noRolesTitle: "NO OPEN ROLES RIGHT NOW",
-      noRolesDesc: "We're always looking for passionate people. Send your CV to careers@verywill.com",
+      noRolesDesc: "We're always looking for passionate people. Send your CV to careers@greece.com",
     },
     shipping: {
       heroTitle: "SHIPPING &",
@@ -176,7 +176,7 @@ export const pages = {
       openTitle: "الوظائف المتاحة",
       applyBtn: "قدِّم الآن",
       noRolesTitle: "لا توجد وظائف متاحة حالياً",
-      noRolesDesc: "نبحث دائماً عن أشخاص شغوفين. أرسل سيرتك الذاتية إلى careers@verywill.com",
+      noRolesDesc: "نبحث دائماً عن أشخاص شغوفين. أرسل سيرتك الذاتية إلى careers@greece.com",
     },
     shipping: {
       heroTitle: "الشحن",
