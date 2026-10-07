@@ -5,4 +5,4 @@ Disallow: /cart
 Disallow: /checkout/
 Disallow: /api/
 
-Sitemap: https://greece-hieroglyphs.com/sitemap.xml
+Sitemap: https://www.darkpyramid.net/sitemap.xml

@@ -12,7 +12,7 @@ interface SEOProps {
 }
 
 const SITE_NAME = "GREECE";
-const SITE_URL = "https://greece-hieroglyphs.com";
+const SITE_URL = "https://www.darkpyramid.net";
 const DEFAULT_OG_IMAGE = "/opengraph.jpg";
 
 function setMeta(attr: string, val: string, content: string) {

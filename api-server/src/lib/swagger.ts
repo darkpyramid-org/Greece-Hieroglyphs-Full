@@ -10,8 +10,8 @@ export const swaggerConfig = {
     description: "Egyptian & Greek Hieroglyphs Streetwear E-commerce API. Built with Dark Pyramid.",
     version: "1.0.0",
     contact: {
-      name: "Greece Hieroglyphs Support",
-      email: "support@greece-hieroglyphs.com",
+      name: "Dark Pyramid Support",
+      email: "darkpyramid.solutions@gmail.com",
     },
   },
   servers: [
@@ -20,7 +20,7 @@ export const swaggerConfig = {
       description: "Development server",
     },
     {
-      url: "https://api.greece-hieroglyphs.com",
+      url: "https://www.darkpyramid.net/api",
       description: "Production server",
     },
   ],

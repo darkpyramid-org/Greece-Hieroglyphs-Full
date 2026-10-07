@@ -49,8 +49,8 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="h-3.5 w-3.5 text-[#C89D29] shrink-0" />
-                <a href="mailto:info@greece-hieroglyphs.com" className="hover:text-[#C89D29] transition-colors">
-                  info@greece-hieroglyphs.com
+                <a href="mailto:darkpyramid.solutions@gmail.com" className="hover:text-[#C89D29] transition-colors">
+                  darkpyramid.solutions@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-2">

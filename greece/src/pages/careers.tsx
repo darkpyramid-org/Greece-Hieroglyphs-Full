@@ -74,7 +74,7 @@ export default function CareersPage() {
                       <span className={`font-bold ${job.type === "Freelance" ? "text-[#213D9A] dark:text-[#7B93E8]" : "text-[#1D4D4F] dark:text-[#4A9EA1]"}`}>{job.type}</span>
                     </div>
                   </div>
-                  <a href="mailto:careers@greece-hieroglyphs.com" className="bg-[#1B1B1B] dark:bg-[#FDF8EF] text-[#FDF8EF] dark:text-[#1B1B1B] hover:bg-[#C89D29] hover:text-[#1B1B1B] px-4 py-2 text-xs font-black hieroglyph-font rounded-lg transition-all shrink-0">
+                  <a href="mailto:darkpyramid.solutions@gmail.com" className="bg-[#1B1B1B] dark:bg-[#FDF8EF] text-[#FDF8EF] dark:text-[#1B1B1B] hover:bg-[#C89D29] hover:text-[#1B1B1B] px-4 py-2 text-xs font-black hieroglyph-font rounded-lg transition-all shrink-0">
                     APPLY NOW
                   </a>
                 </div>

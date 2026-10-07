@@ -3,71 +3,71 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>https://greece-hieroglyphs.com/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://greece-hieroglyphs.com/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://greece-hieroglyphs.com/?lang=ar"/>
+    <loc>https://www.darkpyramid.net/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.darkpyramid.net/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.darkpyramid.net/?lang=ar"/>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://greece-hieroglyphs.com/collection</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://greece-hieroglyphs.com/collection"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://greece-hieroglyphs.com/collection?lang=ar"/>
+    <loc>https://www.darkpyramid.net/collection</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.darkpyramid.net/collection"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.darkpyramid.net/collection?lang=ar"/>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://greece-hieroglyphs.com/story</loc>
+    <loc>https://www.darkpyramid.net/story</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://greece-hieroglyphs.com/culture</loc>
+    <loc>https://www.darkpyramid.net/culture</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://greece-hieroglyphs.com/community</loc>
+    <loc>https://www.darkpyramid.net/community</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://greece-hieroglyphs.com/contact</loc>
+    <loc>https://www.darkpyramid.net/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://greece-hieroglyphs.com/faq</loc>
+    <loc>https://www.darkpyramid.net/faq</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://greece-hieroglyphs.com/shipping</loc>
+    <loc>https://www.darkpyramid.net/shipping</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://greece-hieroglyphs.com/size-guide</loc>
+    <loc>https://www.darkpyramid.net/size-guide</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://greece-hieroglyphs.com/careers</loc>
+    <loc>https://www.darkpyramid.net/careers</loc>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
 
   <url>
-    <loc>https://greece-hieroglyphs.com/track-order</loc>
+    <loc>https://www.darkpyramid.net/track-order</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
